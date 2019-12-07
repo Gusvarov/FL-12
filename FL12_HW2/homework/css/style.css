@@ -145,7 +145,7 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
 @media print {
     section {
         height: 150px;
-         margin-bottom: 35px;
+        margin-bottom: 35px; 
     }
 
     .heading {
@@ -158,12 +158,13 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
 
     #home {
         height: 200px;
-        margin-top: -130px;    
+        margin-top: -125px;   
     }
 
     .tm-content-box .padding-medium {
-        margin-top: -47px;
+        margin-top: -45px;
         height: 180px;
+        
     }
 
     .heading .padding-medium {
@@ -176,9 +177,14 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
         background: none;
     }
 
+    .blocks {
+        margin-top: -80px;
+    }
+
     .tm-sidebar, section .tm-team-img, section #about,
     .blocks .tm-content-box .boxes, .tm-content-box img, #contact,
-    section::before, .carousel-indicators, section .padding-medium ol li::after {
+    section::before, .carousel-indicators, section .padding-medium ol li::after, 
+    section:nth-child(6) {
         display: none;
     }
 
@@ -238,7 +244,11 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
         line-height: 20px;
     }
 
-    .tm-footer {
-        margin-top: -170px;
+    #ideas {
+        height: 150px;
+    }
+
+    footer {
+        height: 5px;
     }
 }
