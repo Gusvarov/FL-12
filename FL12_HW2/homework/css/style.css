@@ -31,16 +31,14 @@ section::before {
     animation-name: text-animations;
 }
 
-/* Have to finish print
- */
 @keyframes text-animations {
     from {
         margin-left: 200px;
-      }
+    }
     
-      to {
+    to {
         margin-left: 0%;
-      }
+    }
 }
 
 section .tm-content-box:first-child {
@@ -60,6 +58,7 @@ section .tm-team-description-container h2{
 
 section #about ul .box-bg:hover {
     background-color: lightgrey;
+    font-style: italic;
 }
 
 section .padding-medium h2 {
@@ -81,6 +80,7 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
     vertical-align: super;
     font-size: 11px;
     font-weight: bold;
+    font-variant: small-caps;
 }
 
 .blocks .padding-medium h2 {
@@ -139,11 +139,13 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
     background-position-y: 95%;
     background-position-x: 99%;
     border: 1px solid lightskyblue;
+    height: 200px;
 }
 
 @media print {
     section {
         height: 150px;
+         margin-bottom: 35px;
     }
 
     .heading {
@@ -174,23 +176,9 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
         background: none;
     }
 
-    .tm-sidebar {
-        display: none;
-    }
-
-    section .tm-team-img {
-        display: none;
-    } 
-
-    section #about {
-        display: none;
-    }
-
-    .blocks .tm-content-box .boxes {
-        display: none;
-    }
-
-    .tm-content-box img, #contact {
+    .tm-sidebar, section .tm-team-img, section #about,
+    .blocks .tm-content-box .boxes, .tm-content-box img, #contact,
+    section::before, .carousel-indicators, section .padding-medium ol li::after {
         display: none;
     }
 
@@ -198,12 +186,8 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
         display: block;
     }
 
-    section::before {
-        display: none;	 
-    }
-
-    .carousel-indicators {
-        display: none;
+    .tm-content-box .padding-medium p {
+        text-align: center;
     }
 
     section .tm-content-box .padding-medium {
@@ -221,6 +205,7 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
     }
 
     section .padding-medium ol li:nth-child(even) {
+        margin-left: 50px;
         list-style-type: none;
         text-align: left;
     }
@@ -228,10 +213,6 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
     section .padding-medium ol li:nth-child(odd) {
         list-style-type: none;
         text-align: right;
-    }
-
-    section .padding-medium ol li::after {
-        display: none;
     }
 
     .blocks .padding-medium {
@@ -244,9 +225,13 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
     }
 
     .carousel-content .flex-item {
-        width: 600px;
+        max-width: 900px;
         height: 135px;
         margin-top: 50px;
+    }
+
+    .carousel-description {
+        text-align: center;
     }
 
     #ideas .tm-section-description  {
@@ -254,6 +239,6 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
     }
 
     .tm-footer {
-        margin-top: -140px;
+        margin-top: -170px;
     }
 }
