@@ -21,6 +21,11 @@ section::before {
     border-color: lightskyblue transparent transparent lightskyblue;	 
 }
 
+.tm-section-description {
+    line-height: 30px;
+    text-indent: 25px;
+}
+
 .tm-banner-inner {
     background-color: white;
 }
@@ -46,10 +51,6 @@ section .tm-content-box:first-child {
     justify-content: space-between;
     align-items: center;
     height: 100%; 
-}
-
-section .tm-content-box:first-child p {
-    text-indent: 25px;
 }
 
 section .tm-team-description-container h2{
@@ -93,10 +94,6 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
     word-spacing: 10px; 
 }
 
-.blocks .padding-medium p {
-    text-indent: 25px;
-}
-
 .blocks .tm-content-box:last-child ul li:nth-child(even) {
     border: 10px solid white;
 }
@@ -109,11 +106,6 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
 
 .blocks .tm-content-box:last-child p:first-letter {
     font-weight: bold;
-}
-
-#ideas .tm-section-description  {
-    line-height: 30px;
-    text-indent: 25px;
 }
 
 #contact form input {
@@ -250,5 +242,9 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
 
     footer {
         height: 5px;
+    }
+
+    .tm-section-description {
+        line-height: 20px;
     }
 }
