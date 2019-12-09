@@ -101,7 +101,7 @@ section .padding-medium ol li:nth-child(-2n +3)::after {
 .blocks .tm-content-box:last-child ul li:nth-child(odd) {
     background-color: lightskyblue;
     color: white;
-    border: 10px solid lightskyblue;
+    padding: 10px;
 }
 
 .blocks .tm-content-box:last-child p:first-letter {
