@@ -1,0 +1,256 @@
+ @mixin buttons {  
+    color: $white-color;    
+    width: 125px;
+    background-color: $button-background-color;
+    height: 40px;
+    border: 1px solid $button-background-color;
+    border-radius: 2px;
+    font-weight: map-get($font-weights, "mini-bold");
+    cursor: pointer;
+ }
+
+ @mixin links {
+     color: $white-color;
+ }
+ 
+ html, body {
+     padding: 0;
+     margin: 0;
+     font-family: 'Source Sans Pro', sans-serif; 
+     background-color: $background;
+ }
+
+header {
+    background: $background-image no-repeat;
+    background-position: left;
+    background-size: inherit;
+    width: 1600px;
+    height: 650px;
+    margin: auto;
+    border-radius: 0 0 40% 0;
+
+    .header-wrap {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-content: center;
+        height: 500px;
+        width: 1250px;
+        margin: auto;
+
+        .landing-logo {
+            display: flex;
+            justify-content: space-between;
+            width: 100px;
+            height: 45px;   
+
+            p {
+                font-weight: map-get($font-weights, "mini-bold");
+                margin-top: -1px;
+                color: $text-color;
+                
+                span {
+                    display: block;
+                    font-size: 7px;
+                    text-align: center;
+                    line-height: 20px;
+                }
+            }
+        }
+
+        .header_heading {
+            font-size: 48px;
+            width: 350px;
+            color: $text-color;
+            font-weight: bold;
+            position: relative;
+
+            &::before {
+                content: "awesome";
+                background-color: $background-text-color;
+                position: absolute;
+                line-height: 35px;
+                top: 74px;
+            }
+        }
+
+        .header_text {
+            width: 650px;
+            color: $text-color;
+            margin-top: -35px;
+            margin-bottom: 20px;
+            white-space: pre-line;
+        }
+
+        div {
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            vertical-align: middle;
+            .header_button {
+                @include buttons;
+            }
+            .login {
+                align-self: center;
+                @include links;
+            }
+        }
+    }
+}
+
+main {
+    width: 1900px;
+    margin: auto;
+
+    .section_text {
+        text-align: center;
+        font-size: 24px;
+        color: $text-color;
+        font-weight: map-get($font-weights, "mini-bold");
+        position: relative;
+
+        &::before {
+            content: "adventure";
+            background-color: $background-text-color;
+            position: absolute;
+            left: 956px;
+        }
+    }
+
+    .section_card_wrap {
+        width: 900px;
+        margin: auto;
+        
+        .section_card {
+            display: flex;
+            margin-top: 15px;
+            background-color: $main-background-color;
+            padding: 15px;
+            border-radius: 5px;
+            height: 200px;
+
+            .section_card_img {
+                width: 300px;
+            }
+
+            .section_card_right_container {
+                display: flex;
+                justify-content: space-around;
+                flex-direction: column;
+                margin: auto;
+                text-align: center;
+
+                .section_card_heading {
+                    color: $white-color;
+                    font-weight: map-get($font-weights, "mini-bold");
+                }
+
+                .section_card_text {
+                    width: 450px;
+                    text-align: start;
+                    color: $other-text-color;
+                }
+
+                .section_link {
+                    @include links;
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+
+    .section_banner {
+        width: 950px;
+        height: 120px;
+        margin: auto auto -60px auto;
+        background-image: linear-gradient(to right, $button-background-color , $gradient);
+        display: flex;
+        justify-content: space-around;
+        margin-top: 120px;
+        border-radius: 5px;
+        z-index: 10;
+        position: relative;
+        
+
+        .section_banner_text_wrap {
+            .section_banner_heading {
+                font-size: 24px;
+                color: $text-color;
+                font-weight: map-get($font-weights, "bold");
+                position: relative;
+
+                &::before {
+                    content: "start";
+                    background-color: $background-text-color;
+                    position: absolute;
+                    left: 97px;
+                }
+            }
+    
+            .section_banner_text {
+                color: $other-text-color;
+                margin-top: -10px;
+            }
+        }
+
+        .section_banner_button {
+            @include buttons;
+            align-self: center;
+        }
+    }
+}
+
+footer {
+    width: 1600px;
+    height: 200px;
+    margin: auto;
+    background-color: $main-background-color;
+    position: relative;
+
+    .footer-wrap {
+        height: 200px;
+        width: 1300px;
+        margin-left: 170px;
+        display: flex;
+        justify-content: space-between;
+        top: 100px;
+        color: $other-text-color;
+        position: absolute;
+
+        .footer_logo {
+            display: flex;
+            width: 100px;
+            justify-content: space-between;
+            height: 80px;
+
+            p {
+                font-weight: map-get($font-weights, "mini-bold");
+                margin-top: -1px;
+                
+                span {
+                    display: block;
+                    font-size: 7px;
+                    text-align: center;
+                    line-height: 20px;
+                }
+            }
+
+            img {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        .footer_text {
+            width: 340px;
+            height: 80px;
+        }
+
+        .footer-cr {
+            @extend .footer_text;
+            width: 200px;
+            padding-top: 20px;
+        }
+    }
+}
+
