@@ -62,7 +62,7 @@ header {
         width: 125px;
         background-color: #E3AC00;
         height: 40px;
-        border: 1px solid #E3AC00;
+        border: none;
         border-radius: 2px;
         font-weight: 600;
         cursor: pointer; }
@@ -141,7 +141,7 @@ main {
       width: 125px;
       background-color: #E3AC00;
       height: 40px;
-      border: 1px solid #E3AC00;
+      border: none;
       border-radius: 2px;
       font-weight: 600;
       cursor: pointer;

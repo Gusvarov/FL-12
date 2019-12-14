@@ -3,7 +3,7 @@
     width: 125px;
     background-color: $button-background-color;
     height: 40px;
-    border: 1px solid $button-background-color;
+    border: none;
     border-radius: 2px;
     font-weight: map-get($font-weights, "mini-bold");
     cursor: pointer;
