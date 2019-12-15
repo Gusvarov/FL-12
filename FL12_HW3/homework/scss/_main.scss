@@ -10,14 +10,14 @@
  }
 
  @mixin links {
-     color: $white-color;
+    color: $white-color;
  }
  
  html, body {
-     padding: 0;
-     margin: 0;
-     font-family: 'Source Sans Pro', sans-serif; 
-     background-color: $background;
+    padding: 0;
+    margin: 0;
+    
+    background-color: $background;
  }
 
 header {
@@ -28,6 +28,7 @@ header {
     height: 650px;
     margin: auto;
     border-radius: 0 0 40% 0;
+    font-family: 'Source Sans Pro', sans-serif; 
 
     .header-wrap {
         display: flex;
@@ -101,6 +102,7 @@ header {
 main {
     width: 1900px;
     margin: auto;
+    font-family: $fonts;
 
     .section_text {
         text-align: center;
@@ -108,6 +110,7 @@ main {
         color: $text-color;
         font-weight: map-get($font-weights, "mini-bold");
         position: relative;
+        font-family: 'Source Sans Pro', sans-serif;
 
         &::before {
             content: "adventure";
@@ -143,6 +146,7 @@ main {
                 .section_card_heading {
                     color: $white-color;
                     font-weight: map-get($font-weights, "mini-bold");
+                    font-family: 'Source Sans Pro', sans-serif;
                 }
 
                 .section_card_text {
@@ -170,6 +174,7 @@ main {
         border-radius: 5px;
         z-index: 10;
         position: relative;
+        font-family: 'Source Sans Pro', sans-serif;
         
 
         .section_banner_text_wrap {
@@ -206,6 +211,7 @@ footer {
     margin: auto;
     background-color: $main-background-color;
     position: relative;
+    font-family: $fonts;
 
     .footer-wrap {
         height: 200px;
@@ -244,6 +250,8 @@ footer {
         .footer_text {
             width: 340px;
             height: 80px;
+            position: relative;
+            bottom: 15px;
         }
 
         .footer-cr {

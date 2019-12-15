@@ -1,7 +1,6 @@
 html, body {
   padding: 0;
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
   background-color: #21232E; }
 
 header {
@@ -11,7 +10,8 @@ header {
   width: 1600px;
   height: 650px;
   margin: auto;
-  border-radius: 0 0 40% 0; }
+  border-radius: 0 0 40% 0;
+  font-family: 'Source Sans Pro', sans-serif; }
   header .header-wrap {
     display: flex;
     justify-content: space-around;
@@ -72,13 +72,15 @@ header {
 
 main {
   width: 1900px;
-  margin: auto; }
+  margin: auto;
+  font-family: "Fresca", sans-serif; }
   main .section_text {
     text-align: center;
     font-size: 24px;
     color: #FDFBF9;
     font-weight: 600;
-    position: relative; }
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif; }
     main .section_text::before {
       content: "adventure";
       background-color: #FF4E33;
@@ -104,7 +106,8 @@ main {
         text-align: center; }
         main .section_card_wrap .section_card .section_card_right_container .section_card_heading {
           color: #fff;
-          font-weight: 600; }
+          font-weight: 600;
+          font-family: 'Source Sans Pro', sans-serif; }
         main .section_card_wrap .section_card .section_card_right_container .section_card_text {
           width: 450px;
           text-align: start;
@@ -122,7 +125,8 @@ main {
     margin-top: 120px;
     border-radius: 5px;
     z-index: 10;
-    position: relative; }
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif; }
     main .section_banner .section_banner_text_wrap .section_banner_heading {
       font-size: 24px;
       color: #FDFBF9;
@@ -152,7 +156,8 @@ footer {
   height: 200px;
   margin: auto;
   background-color: #3B3F50;
-  position: relative; }
+  position: relative;
+  font-family: "Fresca", sans-serif; }
   footer .footer-wrap {
     height: 200px;
     width: 1300px;
@@ -180,7 +185,9 @@ footer {
         height: 45px; }
     footer .footer-wrap .footer_text, footer .footer-wrap .footer-cr {
       width: 340px;
-      height: 80px; }
+      height: 80px;
+      position: relative;
+      bottom: 15px; }
     footer .footer-wrap .footer-cr {
       width: 200px;
       padding-top: 20px; }
