@@ -158,6 +158,11 @@ main {
   text-align: right;
 }
 
+.post:nth-child(even) .info:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
 .post:nth-child(even) .date {
   display: flex;
   flex-direction: column;
@@ -182,6 +187,11 @@ main {
   flex-direction: column;
   width: 370px;
   margin-left: 50px;
+}
+
+.post:nth-child(odd) .info:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease;
 }
 
 .post:nth-child(odd) .date {
@@ -227,6 +237,11 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+}
+
+.info-5:hover {
+  opacity: 0.7;
+  transition: all 0.2s ease;
 }
 
 .info-5 {
