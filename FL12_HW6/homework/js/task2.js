@@ -17,7 +17,7 @@ if ( !Number(a) && a !== 0 || !Number(b) && b !== 0 || !Number(c) && c !== 0 ) {
             console.log('Scalene triangle');
         } 
     } else {
-        alert('Triangle doesn’t exist');
+        console.log('Triangle doesn’t exist');
     }
 }
 
