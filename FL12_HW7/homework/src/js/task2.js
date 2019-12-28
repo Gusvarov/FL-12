@@ -8,11 +8,13 @@ const min = 0;
 let max = 8;
 let ballLand = min + Math.random() * (max - min);
 let round = Math.round(ballLand);
-const two = 2;
-const three = 3;
-const four = 4;
-const eight = 8;
-const hundred = 100;
+const sumIncrease = 2;
+const sumDecrease = 2;
+const lessAttempts = 2;
+const maxAttempts = 3;
+const maxNumIncrease = 4;
+const maxStartNum = 8;
+const maxStartSum = 100;
 
 if ( question === false ) {
     alert('You did not become a billionaire, but can.');
@@ -23,18 +25,17 @@ if ( question === false ) {
             attempts left: ${attempts}
             Total prize: ${total}$
             Possible prize on current attempt ${currentSum}$
-        `));
-        
+        `));       
         if ( isNaN(userInput) ) {
             alert('You must enter only numbers');
         }
         if (userInput !== round) {
             attempts--;
-            if (attempts === two) {
-                currentSum /= two;
+            if (attempts === lessAttempts) {
+                currentSum /= sumDecrease;
             }
             if (attempts === 1) {
-                currentSum /= two;
+                currentSum /= sumDecrease;
             }
             if (!attempts) {
                 alert(`Thank you for your participation. Your prize is: ${total}$`);
@@ -42,11 +43,11 @@ if ( question === false ) {
                 if ( !question ) {
                     break;
                 }
-                attempts = three;
+                attempts = maxAttempts;
                 total = 0;
-                maxSum = hundred;
+                maxSum = maxStartSum;
                 currentSum = maxSum;
-                max = eight;
+                max = maxStartNum;
                 ballLand = min + Math.random() * (max - min);
                 round = Math.round(ballLand);
             }
@@ -54,9 +55,9 @@ if ( question === false ) {
         if ( userInput === round ) {
             while ( question && attempts ) {
                 total += currentSum;
-                attempts = three;
-                max += four;
-                maxSum *= two;
+                attempts = maxAttempts;
+                max += maxNumIncrease;
+                maxSum *= sumIncrease;
                 currentSum = maxSum;
                 ballLand = min + Math.random() * (max - min);
                 round = Math.round(ballLand);
@@ -64,7 +65,7 @@ if ( question === false ) {
                 break;
             }
         } else {
-            currentSum / two;
+            currentSum / sumDecrease;
         }
     }
 }

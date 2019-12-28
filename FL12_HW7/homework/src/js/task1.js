@@ -42,5 +42,5 @@ if ( !emailLogin ) {
         alert('Wrong password');
     }
 } else {
-    alert('i dont know ya');
+    alert('i don\'t know you');
 }
